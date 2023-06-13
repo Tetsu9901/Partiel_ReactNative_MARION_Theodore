@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
+import { View, StyleSheet, Text, SafeAreaView } from 'react-native';
 import GameList from './components/GameList';
+import FormAddGame from './components/FormAddGame';
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <GameList />
-      <StatusBar style="auto" />
+      <FormAddGame />
     </SafeAreaView>
   );
 }
@@ -14,7 +15,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    flexDirection: "column",
+    backgroundColor: '#EFDCF9',
     alignItems: 'center',
     justifyContent: 'center',
   },
