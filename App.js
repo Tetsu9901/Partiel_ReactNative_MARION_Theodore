@@ -2,13 +2,17 @@ import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet, Text, SafeAreaView } from 'react-native';
 import GameList from './components/GameList';
 import FormAddGame from './components/FormAddGame';
+import MyHeader from './components/Header';
+import Count from './components/compter';
 
 export default function App() {
+  const gameData = require("./data/data.json");
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
+      <MyHeader />
       <GameList />
       <FormAddGame />
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -18,6 +22,5 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     backgroundColor: '#EFDCF9',
     alignItems: 'center',
-    justifyContent: 'center',
   },
 });

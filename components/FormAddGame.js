@@ -5,7 +5,6 @@ import { useState } from "react";
 
 const gameData = require("../data/data.json");
 
-
 function FormAddGame() {
     const [text, setText] = useState("");
     const [name, setName] = useState("");
@@ -17,7 +16,6 @@ function FormAddGame() {
         setPrice("");
         setCat("");
     };
-
 
     return (
         <View style={styles.form}>
@@ -43,7 +41,7 @@ function FormAddGame() {
                 onChangeText={(text) => setCat(text)}
                 value={cat}
             />
-            <AddGameBtn name={name} price={price} cat={cat} clear={clearInput} />
+            <AddGameBtn name={name} price={price+'€'} cat={cat} clear={clearInput}/>
         </View>
     );
 }

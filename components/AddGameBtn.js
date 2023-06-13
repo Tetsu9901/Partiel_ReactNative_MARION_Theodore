@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { Button, View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { useState } from 'react';
 
 const gameData = require("../data/data.json");
 
-
 function AddGameBtn({ name, price, cat, clear }) {
-
+ 
     const addGame = () => {
         const newGame = {
             id: gameData.length + 1,
@@ -14,7 +14,6 @@ function AddGameBtn({ name, price, cat, clear }) {
             catégorie: cat,
         };
         gameData.push(newGame);
-        console.log(gameData);
         clear();
     };
 
@@ -32,7 +31,7 @@ function AddGameBtn({ name, price, cat, clear }) {
 
 const styles = StyleSheet.create({
     Btn: {
-        backgroundColor: "#FF6B6B",
+        backgroundColor: "purple",
         padding: 10,
         borderRadius: 10,
         marginTop: 1,
