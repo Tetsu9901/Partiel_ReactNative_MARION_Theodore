@@ -41,7 +41,6 @@ const GameList = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         flexDirection: "column",
         maxHeight: "50%",
         alignItems: 'center',

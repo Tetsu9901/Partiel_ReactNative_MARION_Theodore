@@ -15,10 +15,11 @@ const MyHeader = () => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         backgroundColor: "purple",
         width: "100%",
-        maxHeight: "10%",
+        maxHeight: "25%",
+        paddingTop: 20,
+        paddingBottom: 20,
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
